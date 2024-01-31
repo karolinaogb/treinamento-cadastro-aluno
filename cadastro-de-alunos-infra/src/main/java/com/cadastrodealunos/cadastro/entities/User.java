@@ -1,24 +1,36 @@
-package com.cadastrodealunos.cadastrodealunosinfra.entities;
+package com.cadastrodealunos.cadastro.entities;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-public class CadastrarAluno implements Serializable{
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tb_CadastroAluno")
+
+public class User implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
-	private long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
+	private Long id;
 	private String name;
-	private long rg;
+	private Long rg;
 	private String sexo;
 	private String estadoCivil;
 	private String dataDeNascimento;
 	private String observacao;
 	
-	public CadastrarAluno () {
+	public User () {
 	}
 	
-	public CadastrarAluno(long id, String name, long rg, String sexo, String estadoCivil, String dataDeNascimento,
+	public User (Long id, String name, Long rg, String sexo, String estadoCivil, String dataDeNascimento,
 			String observacao) {
 		super();
 		this.id = id;
@@ -84,7 +96,7 @@ public class CadastrarAluno implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		CadastrarAluno other = (CadastrarAluno) obj;
+		User other = (User) obj;
 		return id == other.id;
 	}
 	

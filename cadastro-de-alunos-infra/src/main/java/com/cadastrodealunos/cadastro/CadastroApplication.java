@@ -1,13 +1,13 @@
-package com.cadastrodealunos.cadastrodealunosinfra;
+package com.cadastrodealunos.cadastro;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CadastroDeAlunosInfraApplication {
+public class CadastroApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CadastroDeAlunosInfraApplication.class, args);
+		SpringApplication.run(CadastroApplication.class, args);
 	}
 
 }
